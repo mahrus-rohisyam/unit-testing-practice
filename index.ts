@@ -1,15 +1,16 @@
-import {divide, multiply, substract, sum} from './src/commands'
+import { Calculator } from "./commands"
 
-const main = async (fparam: number, sparam:number) => {
-  let multiplying = multiply(fparam, sparam)
-  let dividing = divide(fparam, sparam)
-  let substracting = substract(fparam, sparam)
-  let adding = sum(fparam, sparam)
 
-  console.log('Multiplying', multiplying)
-  console.log('Dividing', dividing)
-  console.log('Substacting', substracting)
-  console.log('Adding', adding)
+const main = async (fparam: number, sparam: number) => {
+  let multiply = Calculator.add(fparam, sparam)
+  let divid = Calculator.divide(fparam, sparam)
+  let substract = Calculator.subtract(fparam, sparam)
+  let add = Calculator.add(fparam, sparam)
+
+  console.log('Multiply', multiply)
+  console.log('Divid', divid)
+  console.log('Substact', substract)
+  console.log('Add', add)
 }
 
 main(10, 5)
